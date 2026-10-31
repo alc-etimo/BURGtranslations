@@ -1060,12 +1060,12 @@ img,svg,table{max-width:100%}
 <div class="carousel-shell clients-carousel" data-carousel="clients"><div aria-label="Client carousel controls" class="client-carousel-controls"><button aria-label="Previous collaboration" class="client-control carousel-prev" data-carousel-prev="" type="button">‹</button><button aria-label="Next collaboration" class="client-control carousel-next" data-carousel-next="" type="button">›</button></div>
 <div aria-label="Selected clients and collaborations carousel" class="carousel-viewport" data-carousel-viewport="" tabindex="0">
 <div class="carousel-track" data-carousel-track="">
-<article class="client-card"><span class="client-card-index">COLLABORATION 01</span><div class="client-wordmark">[CLIENT / LSP 01]</div></article>
-<article class="client-card"><span class="client-card-index">COLLABORATION 02</span><div class="client-wordmark">[CLIENT / LSP 02]</div></article>
-<article class="client-card"><span class="client-card-index">COLLABORATION 03</span><div class="client-wordmark">[CLIENT / LSP 03]</div></article>
-<article class="client-card"><span class="client-card-index">COLLABORATION 04</span><div class="client-wordmark">[CLIENT / LSP 04]</div></article>
-<article class="client-card"><span class="client-card-index">COLLABORATION 05</span><div class="client-wordmark">[CLIENT / LSP 05]</div></article>
-<article class="client-card"><span class="client-card-index">COLLABORATION 06</span><div class="client-wordmark">[CLIENT / LSP 06]</div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/Iyuno-SDI-Group-Logo%20(1).png?raw=true" /></div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/acclaro-logo.webp?raw=true" /></div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/itc-global-trans%20(1).png?raw=true" /></div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/claro-logo-att%20(2).png?raw=true" /></div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/tw-logo1%20(1).png?raw=true" /></div></article>
+<article class="client-card"><span class="client-card-index"></span><div class="client-wordmark"><img src="https://github.com/alc-etimo/BURGtranslations/blob/main/vsi-logo%20(1).png?raw=true" /></div></article>
 </div>
 </div>
 </div>
@@ -1259,14 +1259,13 @@ img,svg,table{max-width:100%}
 <a aria-label="LinkedIn profile" href="https://www.linkedin.com/in/arianelesnyak/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V9h3v10ZM6.5 7.7a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM20 19h-3v-5c0-3-4-2.8-4 0v5h-3V9h3v1.6c1.4-2.6 7-2.8 7 2.5V19Z"></path></svg>
 </a>
-<a aria-label="ProZ.com — replace with personal profile URL" href="https://www.proz.com/" rel="noopener noreferrer" target="_blank" title="ProZ profile URL needs to be personalized">
+<a aria-label="ProZ.com — replace with personal profile URL" href="https://www.proz.com/profile/2872358?__cf_chl_tk=vfd.MD85H79yMVaXlGQDGP43tA473dWLdoy785CZMN0-1792127338-1.0.1.1-ffw2SBqtYtxQp43YzyoTegZuGMiPIZVA7AuykLQg7VE" rel="noopener noreferrer" target="_blank" title="ProZ profile URL needs to be personalized">
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 3h8.2a5.8 5.8 0 0 1 0 11.6H8.5V21H5V3Zm3.5 3.5v4.6h4.7a2.3 2.3 0 0 0 0-4.6H8.5Z"></path></svg>
 </a>
 <a aria-label="Download Ariane Lesnyak CV PDF" download="" href="Ariane_Lesnyak_CV_LQA.pdf" title="Download CV (place CV PDF next to this HTML)">
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v3h16v-3"></path><path d="M3 2h18v20H3z"></path></svg>
 </a>
 </div>
-<p class="footer-social-note">LinkedIn · ProZ · Download CV</p>
 </div>
 </div>
 </footer>
