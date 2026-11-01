@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Challenge story — AI Chatbot Content Optimization for LQA Specialist application at BURG Translations."/>
+<meta name="theme-color" content="#282d78"/>
+<title>Challenge Story · AI Chatbot Content Optimization — Ariane Lesnyak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --burg-navy: #282d78;
+  --burg-blue: #1e2569;
+  --burg-orange: #f49820;
+  --burg-light-blue: #88bbc8;
+  --text-primary: #414141;
+  --text-muted: #6c6c6c;
+  --background: #ffffff;
+  --background-alt: #f9f9f9;
+  --border: #e1e1e1;
+  --shadow: 0 16px 40px rgba(40, 45, 120, 0.08);
+  --container: 1010px;
+  --radius: 4px;
+  --destructive: #c53030;
+  --success: #2f855a;
+  --accent: var(--burg-orange);
+  --primary: var(--burg-navy);
+  --muted-foreground: var(--text-muted);
+  --muted: #f0f0f3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 98px; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+body.menu-open { overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+img, svg { max-width: 100%; }
+::selection { color: #fff; background: var(--burg-navy); }
+
+.container { width: min(100% - 48px, var(--container)); margin-inline: auto; }
+
+/* ========== HEADER (from BURG main) ========== */
+.site-header {
+  position: sticky; z-index: 100; top: 0; height: 90px;
+  color: #fff; background: var(--burg-navy);
+  box-shadow: 0 3px 15px rgba(16, 19, 67, .09);
+}
+.header-inner {
+  height: 100%; display: flex; align-items: center;
+  justify-content: space-between; gap: 28px;
+}
+.brand { display: inline-flex; flex-direction: column; line-height: 1.2; flex: 0 0 auto; }
+.brand-name { color: #fff; font-size: 19px; font-weight: 800; letter-spacing: .055em; }
+.brand-name span { color: var(--burg-orange); }
+.brand-subtitle {
+  margin-top: 5px; color: rgba(255,255,255,.72);
+  font-size: 9px; font-weight: 700; letter-spacing: .17em;
+}
+.primary-nav { display: flex; align-items: center; gap: clamp(15px, 2vw, 27px); margin-left: auto; }
+.primary-nav > a:not(.nav-cta) {
+  color: rgba(255,255,255,.91); font-size: 12px; font-weight: 700;
+  transition: color .18s ease;
+}
+.primary-nav > a:not(.nav-cta):hover,
+.primary-nav > a:not(.nav-cta):focus-visible { color: var(--burg-orange); }
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 42px; padding: 9px 20px; border-radius: 24px;
+  color: #fff; background: var(--burg-orange);
+  font-size: 12px; font-weight: 800;
+  transition: transform .2s ease, background .2s ease;
+}
+.nav-cta:hover { transform: translateY(-1px); background: #e88a10; }
+.menu-toggle {
+  display: none; width: 44px; height: 44px; padding: 11px;
+  border: 1px solid rgba(255,255,255,.32); border-radius: 3px; background: transparent;
+}
+.menu-toggle span {
+  display: block; height: 2px; margin: 4px 0; background: #fff;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(6px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-6px) rotate(-45deg); }
+
+/* ========== PAGE HERO (challenge focus) ========== */
+.challenge-hero {
+  padding: 64px 0 48px;
+  background: var(--background-alt);
+  border-bottom: 1px solid var(--border);
+}
+.challenge-hero .eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0 0 16px; color: var(--burg-blue);
+  font-size: 10px; font-weight: 800; letter-spacing: .16em;
+}
+.eyebrow-rule { width: 26px; height: 3px; background: var(--burg-orange); }
+.challenge-hero h1 {
+  max-width: 720px; margin: 0 0 18px;
+  color: var(--burg-blue); font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800; letter-spacing: -.04em; line-height: 1.15;
+}
+.challenge-hero h1 span { color: var(--burg-orange); }
+.challenge-hero .lede {
+  max-width: 640px; margin: 0 0 22px;
+  color: #555; font-size: 16px; line-height: 1.7;
+}
+.challenge-meta {
+  display: flex; flex-wrap: wrap; gap: 10px 18px;
+  color: var(--text-muted); font-size: 12px; font-weight: 600;
+}
+.challenge-meta strong { color: var(--burg-navy); }
+
+/* ========== CASE STUDY SECTION ========== */
+.case-studies { padding: 56px 0 80px; background: var(--background); }
+.section-title {
+  font-size: clamp(26px, 3.2vw, 36px); font-weight: 800;
+  color: var(--burg-blue); text-align: left; margin-bottom: 8px;
+  letter-spacing: -.03em;
+}
+.section-intro {
+  max-width: 620px; margin-bottom: 36px;
+  color: var(--text-muted); font-size: 14px; line-height: 1.7;
+}
+
+.case-card {
+  background: white; border-radius: var(--radius);
+  border: 1px solid var(--border); overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow .3s, transform .3s;
+}
+.case-card:hover { box-shadow: 0 14px 40px rgba(40,45,120,.12); transform: translateY(-2px); }
+.case-card-content { padding: 2rem; }
+.case-title {
+  font-size: 1.45rem; font-weight: 800; margin-bottom: 1.35rem;
+  color: var(--burg-blue); letter-spacing: -.02em;
+}
+
+.case-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.35rem; margin-bottom: 1.35rem;
+}
+.case-box {
+  background: rgba(0,0,0,0.02); border-radius: var(--radius);
+  padding: 1.1rem; transition: transform .3s ease;
+  min-height: 170px; display: flex; flex-direction: column;
+  border: 1px solid transparent;
+}
+.case-box.results, .case-box.metrics { min-height: 190px; }
+.case-box:hover { transform: scale(1.015); }
+.case-box-header {
+  display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem;
+}
+.case-box-header svg { width: 18px; height: 18px; flex-shrink: 0; }
+.case-box-header.challenge svg { color: var(--destructive); }
+.case-box-header.solution svg { color: var(--burg-navy); }
+.case-box-header.before svg { color: var(--destructive); }
+.case-box-header.after svg { color: var(--success); }
+.case-box-header.results svg { color: var(--burg-navy); }
+.case-box-header.metrics svg { color: var(--burg-orange); }
+.case-box-header h4 {
+  font-size: .95rem; font-weight: 700; color: var(--burg-blue); margin: 0;
+}
+.case-box p {
+  font-size: 13.5px; line-height: 1.6; color: var(--text-primary); flex-grow: 1;
+}
+.case-box.before {
+  background: rgba(197,48,48,0.04); border-color: rgba(197,48,48,0.18);
+}
+.case-box.after {
+  background: rgba(47,133,90,0.05); border-color: rgba(47,133,90,0.2);
+}
+.case-box.results {
+  background: rgba(40,45,120,0.04); border-color: rgba(40,45,120,0.15);
+}
+.case-box.metrics {
+  background: rgba(244,152,32,0.06); border-color: rgba(244,152,32,0.22);
+}
+
+/* Safari mock */
+.safari-mock {
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--border); margin-top: .85rem;
+  min-height: 200px; display: flex; flex-direction: column;
+}
+.safari-header {
+  background: rgba(0,0,0,0.04); padding: .45rem .7rem;
+  display: flex; align-items: center; gap: .45rem;
+  border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.safari-dots { display: flex; gap: 5px; }
+.safari-dot { width: 10px; height: 10px; border-radius: 50%; }
+.safari-dot.red { background: #ff5f57; }
+.safari-dot.yellow { background: #ffbd2e; }
+.safari-dot.green { background: #27c93f; }
+.safari-url {
+  flex: 1; background: white; border: 1px solid var(--border);
+  border-radius: 3px; padding: 3px 8px; font-size: 10px;
+  color: var(--text-muted); font-family: ui-monospace, monospace;
+}
+.safari-content {
+  background: white; padding: .85rem; flex-grow: 1;
+  overflow: hidden; position: relative; font-size: 11px;
+}
+
+/* Chat */
+.chat-message {
+  background: rgba(0,0,0,0.05); padding: 7px 9px;
+  border-radius: 7px; max-width: 88%; margin-bottom: 7px;
+  font-size: 11px; line-height: 1.45;
+}
+.chat-buttons { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 4px; }
+.chat-btn {
+  padding: 4px 9px; background: rgba(244,152,32,0.18);
+  color: var(--burg-navy); border-radius: 9999px;
+  font-size: 10px; font-weight: 700; cursor: pointer;
+  transition: all .25s; border: none;
+}
+.chat-btn:hover { background: var(--burg-orange); color: white; }
+.chat-btn-blue {
+  background: rgba(40,45,120,0.08); color: var(--burg-navy);
+  border: 1px solid rgba(40,45,120,0.2);
+}
+.chat-btn-blue:hover { background: var(--burg-navy); color: white; }
+
+/* Before table */
+.before-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  line-height: 1.4;
+  table-layout: fixed;
+}
+.before-table th {
+  background: rgba(40,45,120,0.08);
+  color: var(--burg-navy);
+  font-weight: 800;
+  text-align: left;
+  padding: 5px 6px;
+  border: 1px solid var(--border);
+  font-size: 9.5px;
+  letter-spacing: .04em;
+}
+.before-table td {
+  vertical-align: top;
+  padding: 6px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: #fff;
+}
+.before-table .col-check { width: 38%; }
+.before-table .col-action { width: 62%; }
+.before-table .hl {
+  transition: background .25s, color .25s, box-shadow .25s;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+.before-table .hl.active {
+  background: rgba(244,152,32,0.28);
+  color: var(--burg-navy);
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(244,152,32,0.55);
+}
+.before-table .hl.blink {
+  animation: hlBlink 0.55s ease 2;
+}
+@keyframes hlBlink {
+  0%, 100% { background: rgba(244,152,32,0.1); }
+  50% { background: rgba(244,152,32,0.45); color: var(--burg-navy); font-weight: 700; }
+}
+.before-table .type-line {
+  display: inline;
+  white-space: pre-wrap;
+}
+.before-table .type-cursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.95em;
+  background: var(--burg-orange);
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  animation: blinkCursor .7s step-end infinite;
+}
+@keyframes blinkCursor { 50% { opacity: 0; } }
+.action-block { margin-bottom: 4px; }
+.action-block:last-child { margin-bottom: 0; }
+.action-label { font-weight: 800; color: var(--burg-navy); font-size: 9.5px; }
+
+/* Proposed solution */
+.case-box.proposed {
+  background: rgba(40,45,120,0.04);
+  border-color: rgba(40,45,120,0.18);
+  min-height: auto;
+}
+.case-box-header.proposed svg { color: var(--burg-navy); }
+.proposed-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5px;
+  line-height: 1.45;
+  table-layout: fixed;
+}
+.proposed-table .q-row th {
+  background: var(--burg-navy);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+  border: 1px solid var(--burg-navy);
+  font-size: 11px;
+}
+.proposed-table .cols th {
+  background: rgba(40,45,120,0.08);
+  color: var(--burg-navy);
+  font-weight: 800;
+  text-align: center;
+  padding: 6px;
+  border: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: .04em;
+  width: 50%;
+}
+.proposed-table td {
+  vertical-align: top;
+  padding: 10px 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  position: relative;
+  min-height: 120px;
+}
+.prop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  border: 2px solid var(--burg-navy);
+  background: #fff;
+  color: var(--burg-navy);
+  transition: background .2s, color .2s, transform .15s, box-shadow .2s;
+  position: relative;
+  z-index: 2;
+}
+.prop-btn:hover, .prop-btn.is-active {
+  background: var(--burg-navy);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40,45,120,.2);
+}
+.prop-btn.yes-btn.is-active { background: var(--success); border-color: var(--success); }
+.prop-btn.no-btn.is-active { background: var(--destructive); border-color: var(--destructive); }
+.prop-steps {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: rgba(40,45,120,0.04);
+  border-radius: 4px;
+  border-left: 3px solid var(--burg-orange);
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--text-primary);
+  display: none;
+  animation: fadeSteps .35s ease;
+}
+.prop-steps.is-visible { display: block; }
+.prop-steps ol { margin: 0; padding-left: 18px; }
+.prop-steps li { margin-bottom: 3px; }
+@keyframes fadeSteps {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+/* Fake mouse cursor */
+.fake-mouse {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .2s;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.25));
+}
+.fake-mouse.is-visible { opacity: 1; }
+.fake-mouse svg { width: 18px; height: 18px; }
+
+
+
+/* Hand pointer */
+.hand-pointer {
+  display: inline-block; margin-left: 6px;
+  animation: pointHand 2s infinite ease-in-out;
+  transform-origin: 70% 90%;
+}
+@keyframes pointHand {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(10deg); }
+}
+
+/* Metrics bars */
+.metrics-bars { margin-top: .4rem; }
+.metrics-bar { margin-bottom: .7rem; }
+.metrics-header {
+  display: flex; justify-content: space-between;
+  font-size: 11.5px; margin-bottom: .2rem;
+}
+.metrics-label { color: var(--text-muted); }
+.metrics-value { font-weight: 800; color: var(--burg-orange); }
+.metrics-track {
+  width: 100%; height: 10px; background: var(--muted);
+  border-radius: 9999px; overflow: hidden;
+}
+.metrics-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--burg-orange), var(--burg-navy));
+  border-radius: 9999px; animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .72; }
+}
+
+/* Story context block */
+.story-context {
+  margin-top: 28px; padding: 22px 24px;
+  border-left: 4px solid var(--burg-orange);
+  background: var(--background-alt); border-radius: 0 var(--radius) var(--radius) 0;
+}
+.story-context h3 {
+  margin: 0 0 12px; color: var(--burg-blue);
+  font-size: 15px; font-weight: 800;
+}
+.story-context p {
+  margin: 0 0 10px; color: #555; font-size: 13.5px; line-height: 1.7;
+}
+.story-context p:last-child { margin-bottom: 0; }
+.story-context strong { color: var(--burg-navy); }
+
+/* ========== FOOTER ========== */
+.site-footer {
+  color: #fff; background: #20245f;
+  padding: 28px 0;
+}
+.footer-inner {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.footer-brand {
+  flex: 0 0 auto; font-size: 13px; font-weight: 800; letter-spacing: .06em;
+}
+.footer-brand span { color: var(--burg-orange); }
+.footer-inner p {
+  margin: 0 auto 0 0; color: rgba(255,255,255,.64); font-size: 11px;
+}
+.footer-right {
+  display: flex; align-items: center; gap: 16px;
+  color: rgba(255,255,255,.65); font-size: 11px;
+}
+.footer-right a { color: var(--burg-orange); font-weight: 700; }
+.footer-right a:hover { text-decoration: underline; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .case-row { grid-template-columns: 1fr; }
+  .site-header { height: 76px; }
+  .menu-toggle { display: block; }
+  .primary-nav {
+    position: fixed; inset: 76px 0 auto;
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+    padding: 10px 22px 24px; background: var(--burg-navy);
+    box-shadow: 0 18px 24px rgba(16,19,67,.18);
+    transform: translateY(-8px); opacity: 0;
+    pointer-events: none; visibility: hidden;
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  }
+  .primary-nav.is-open {
+    transform: translateY(0); opacity: 1;
+    pointer-events: auto; visibility: visible;
+  }
+  .primary-nav > a:not(.nav-cta) {
+    padding: 14px 2px; border-bottom: 1px solid rgba(255,255,255,.14);
+    font-size: 13px;
+  }
+  .primary-nav .nav-cta { justify-content: center; margin-top: 14px; }
+}
+@media (max-width: 600px) {
+  .container { width: calc(100% - 32px); }
+  .case-card-content { padding: 1.25rem; }
+  .challenge-hero { padding: 48px 0 36px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footer-inner p { order: 3; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Ariane Lesnyak — home">
+      <span class="brand-name">Ariane<span>.</span>Lesnyak</span>
+      <span class="brand-subtitle">LINGUISTIC QUALITY ASSURANCE</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav" aria-label="Main">
+      <a href="#challenge">The challenge</a>
+      <a href="#case">Case study</a>
+      <a href="#story">How I solved it</a>
+      <a class="nav-cta" href="mailto:ariane.etimo@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="challenge-hero">
+    <div class="container">
+      <div class="eyebrow"><span class="eyebrow-rule"></span> APPLICATION · LQA SPECIALIST · BURG TRANSLATIONS</div>
+      <h1>A significant challenge I faced — and <span>how I overcame it</span></h1>
+      <p class="lede">
+        After leading the migration and hygiene of 15,000 knowledge-base assets into a single CRM,
+        I designed and led a company-wide redesign of chatbot content architecture so that
+        long, multi-step regulatory and technical procedures became scannable decision paths
+        that call-center agents could actually use within a ~4-minute AHT.
+      </p>
+      <div class="challenge-meta">
+        <span><strong>Role:</strong> Lead Linguist</span>
+        <span><strong>Scope:</strong> 15K assets · 30K+ agents</span>
+        <span><strong>Domain:</strong> Telecom · Regulatory · Financial</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="case-studies" id="case">
+    <div class="container">
+      <h2 class="section-title">Case Study</h2>
+      <p class="section-intro">
+        AI Chatbot Content Optimization — turning dense knowledge-base tables into guided,
+        decision-tree flows that operators could follow under real-time pressure.
+      </p>
+
+      <div class="case-card">
+        <div class="case-card-content">
+          <h3 class="case-title">AI Chatbot Content Optimization</h3>
+
+          <!-- Challenge / Solution -->
+          <div class="case-row">
+            <div class="case-box">
+              <div class="case-box-header challenge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <h4>Challenge</h4>
+              </div>
+              <p>After unifying 15K assets, regulatory and technical content remained long multi-step blocks in simple HTML tables. Checklist and Action lived side-by-side; Yes/No options shared the same cell. Agents with ~4 min AHT could not scan or follow the paths, so the content was barely used despite the migration effort.</p>
+            </div>
+            <div class="case-box">
+              <div class="case-box-header solution">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                </svg>
+                <h4>Solution</h4>
+              </div>
+              <p>I designed a vertical architecture within the limited HTML editor: question in a merged header row, Yes and No each in their own column with anchors to specific instructions. Validated with an IBM engineer and stakeholders, it became a company-wide project to convert the full set of chatbot contents. I led the work, starting with high-impact financial flows.</p>
+            </div>
+          </div>
+
+          <!-- Before -->
+          <div class="case-row" style="grid-template-columns:1fr;">
+            <div class="case-box before">
+              <div class="case-box-header before">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                  <polyline points="17 18 23 18 23 12"></polyline>
+                </svg>
+                <h4>Before</h4>
+              </div>
+              <p>Dense tables · Yes/No in the same cell · long unreadable blocks</p>
+              <div class="safari-mock">
+                <div class="safari-header">
+                  <div class="safari-dots">
+                    <div class="safari-dot red"></div>
+                    <div class="safari-dot yellow"></div>
+                    <div class="safari-dot green"></div>
+                  </div>
+                  <div class="safari-url">crm.knowledge-base / article-table</div>
+                </div>
+                <div class="safari-content" style="overflow:auto;padding:6px;">
+                  <table class="before-table" id="before-table">
+                    <thead>
+                      <tr>
+                        <th class="col-check">CHECKLIST</th>
+                        <th class="col-action">ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="col-check">
+                          <span class="hl" id="bf-q">1. Does the client has an open invoice?</span>
+                        </td>
+                        <td class="col-action">
+                          <div class="action-block">
+                            <span class="hl action-label" id="bf-yes">YES</span><br>
+                            <span class="hl" id="bf-yes-1">1. Verify amount.</span><br>
+                            <span class="hl" id="bf-yes-2">2. Open screen X.</span><br>
+                            <span class="hl type-line" id="bf-yes-more"></span>
+                          </div>
+                          <div class="action-block" style="margin-top:8px;">
+                            <span class="hl action-label" id="bf-no">NO</span><br>
+                            <span class="hl" id="bf-no-1">1. Check contract type.</span><br>
+                            <span class="hl" id="bf-no-2">2. Escalate to Tier 2 if amount &gt; threshold.</span><br>
+                            <span class="hl" id="bf-no-3">3. Document outcome in CRM field Y.</span><br>
+                            <span class="hl type-line" id="bf-no-more"></span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proposed Solution (between Before and After) -->
+          <div class="case-row" style="grid-template-columns:1fr;">
+            <div class="case-box proposed">
+              <div class="case-box-header proposed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4l2.5 2.5"></path>
+                </svg>
+                <h4>Proposed Solution</h4>
+              </div>
+              <p>Vertical architecture: question as header · YES / NO each in their own column · click to reveal path</p>
+              <div class="safari-mock" style="margin-top:10px;">
+                <div class="safari-header">
+                  <div class="safari-dots">
+                    <div class="safari-dot red"></div>
+                    <div class="safari-dot yellow"></div>
+                    <div class="safari-dot green"></div>
+                  </div>
+                  <div class="safari-url">crm.knowledge-base / proposed-layout</div>
+                </div>
+                <div class="safari-content" style="padding:8px;position:relative;overflow:visible;">
+                  <svg class="fake-mouse" id="fake-mouse" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.5 3.21V20.8c0 .1.1.2.2.2h.1l4.3-3.4 2.1 5.1c.1.2.3.2.4.2l1.9-.8c.2-.1.2-.3.2-.4l-2.1-5.1 5.2-.1c.1 0 .2-.1.2-.2V3.2c0-.1-.1-.2-.2-.2H5.7c-.1 0-.2.1-.2.21z" fill="#282d78" stroke="#fff" stroke-width="1"/>
+                  </svg>
+                  <table class="proposed-table" id="proposed-table">
+                    <thead>
+                      <tr class="q-row">
+                        <th colspan="2">Does the client has an open invoice?</th>
+                      </tr>
+                      <tr class="cols">
+                        <th>YES</th>
+                        <th>NO</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="prop-yes-cell">
+                          <button type="button" class="prop-btn yes-btn" id="prop-yes-btn" onclick="showPropPath('yes')">YES</button>
+                          <div class="prop-steps" id="prop-yes-steps">
+                            <ol>
+                              <li>Open screen X.</li>
+                              <li>Verify amount.</li>
+                              <li>Tell the client the amount to be paid.</li>
+                              <li>Ask if they want to pay it by debit or credit card.</li>
+                              <li>Record it in the system Y.</li>
+                              <li>Ask if you may help with anything else.</li>
+                              <li>Thank the client and end the call.</li>
+                            </ol>
+                          </div>
+                        </td>
+                        <td id="prop-no-cell">
+                          <button type="button" class="prop-btn no-btn" id="prop-no-btn" onclick="showPropPath('no')">NO</button>
+                          <div class="prop-steps" id="prop-no-steps">
+                            <ol>
+                              <li>Check contract type.</li>
+                              <li>Escalate to Tier 2 if amount &gt; threshold.</li>
+                              <li>Document outcome in CRM field Y.</li>
+                              <li>Tell the client they will get a call back within 3 business days.</li>
+                              <li>Ask if you may help with anything else.</li>
+                              <li>Thank the client and end the call.</li>
+                            </ol>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- After -->
+          <div class="case-row" style="grid-template-columns:1fr;">
+            <div class="case-box after">
+              <div class="case-box-header after">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <h4>After</h4>
+              </div>
+              <p>Guided decision path · max 5 buttons · scannable <span class="hand-pointer">👆</span></p>
+              <div class="safari-mock" style="margin-top:0;">
+                <div class="safari-header">
+                  <div class="safari-dots">
+                    <div class="safari-dot red"></div>
+                    <div class="safari-dot yellow"></div>
+                    <div class="safari-dot green"></div>
+                  </div>
+                  <div class="safari-url">crm.knowledge-base / chatbot-flow</div>
+                </div>
+                <div id="case3-chatbot" class="safari-content">
+                  <div class="chat-message">
+                    <span style="color:var(--text-muted);">Does the client have an open invoice?</span>
+                  </div>
+                  <div class="chat-buttons">
+                    <button class="chat-btn" onclick="chatStep(2, 'Yes')">Yes</button>
+                    <button class="chat-btn" onclick="chatStep(2, 'No')">No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results / Metrics -->
+          <div class="case-row">
+            <div class="case-box results">
+              <div class="case-box-header results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <h4>Results</h4>
+              </div>
+              <p>Architecture validated by IBM engineer and stakeholders, then rolled out company-wide. We started with financial flows (highest business impact). Within one week, one of the redesigned flows ranked among the <strong>top 2%</strong> most accessed assets out of 15,000. Adoption by agents was immediate; the same pattern was applied across remaining high-volume topics.</p>
+            </div>
+            <div class="case-box metrics">
+              <div class="case-box-header metrics">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                <h4>Metrics</h4>
+              </div>
+              <div class="metrics-bars">
+                <div class="metrics-bar">
+                  <div class="metrics-header">
+                    <span class="metrics-label">Assets in scope</span>
+                    <span class="metrics-value">15K</span>
+                  </div>
+                  <div class="metrics-track"><div class="metrics-fill" style="width:100%"></div></div>
+                </div>
+                <div class="metrics-bar">
+                  <div class="metrics-header">
+                    <span class="metrics-label">Top-access ranking (1 week)</span>
+                    <span class="metrics-value">Top 2%</span>
+                  </div>
+                  <div class="metrics-track"><div class="metrics-fill" style="width:98%"></div></div>
+                </div>
+                <div class="metrics-bar">
+                  <div class="metrics-header">
+                    <span class="metrics-label">Agents supported (call centers)</span>
+                    <span class="metrics-value">30K+</span>
+                  </div>
+                  <div class="metrics-track"><div class="metrics-fill" style="width:90%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed story -->
+      <div class="story-context" id="story">
+        <h3>How I approached the obstacle</h3>
+        <p>
+          I had already led the linguistic side of the migration: unifying content from multiple platforms,
+          removing duplicates, and consolidating equivalent articles so the knowledge base was clean.
+          Even after that hygiene, the remaining content — especially regulatory, legal and technical —
+          still failed in production. Weekly access reports showed almost no usage. The reason was structural:
+          procedures lived in simple two-column HTML tables (Checklist | Action). Yes and No branches shared
+          the same cell, making paths invisible and unscannable for operators under a ~4-minute AHT.
+        </p>
+        <p>
+          Working inside the constraints of the HTML editor, I proposed a vertical layout: the question
+          occupied a merged header row; Yes and No each received their own column, with anchors that
+          jumped to the corresponding instruction block. The design was reviewed with an IBM engineer
+          and with business stakeholders, then approved as a company-wide initiative.
+        </p>
+        <p>
+          As lead, I received process flowcharts from other areas, translated them into chatbot decision
+          trees (respecting a hard limit of five response buttons), and sometimes corrected process logic
+          that did not fit the channel. I produced language and adaptation guidelines, button-copy rules,
+          and A/B tests with live operators. We prioritised financial topics for maximum business impact.
+          Flows were authored in Excel, compiled via SQL, and published into the CRM. Adoption followed
+          immediately: one of the first converted flows entered the top 2% of all 15K assets within a week.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">Ariane<span>.</span>Lesnyak</div>
+    <p>Linguistic Quality Assurance · Brazilian Portuguese · Remote</p>
+    <div class="footer-right">
+      <a href="mailto:ariane.etimo@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/arianelesnyak/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  /* Mobile menu */
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('primaryNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+      document.body.classList.toggle('menu-open', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }));
+  }
+
+  /* Interactive chatbot (After mock) */
+  let chatState = {};
+  window.chatStep = function (step, selection) {
+    const container = document.getElementById('case3-chatbot');
+    if (!container) return;
+    chatState.step = step;
+    chatState.selection = selection;
+    container.innerHTML = '';
+
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message';
+    userMsg.innerHTML = `<span style="color:var(--burg-orange);font-weight:700;">Agent:</span> ${selection}`;
+    container.appendChild(userMsg);
+
+    const botMsg = document.createElement('div');
+    botMsg.className = 'chat-message';
+    botMsg.style.background = 'rgba(40,45,120,0.06)';
+
+    if (selection === 'Yes') {
+      botMsg.innerHTML = `<span style="color:var(--text-muted);">Verify the outstanding amount on screen X. What is the amount range?</span>`;
+      container.appendChild(botMsg);
+      const btns = document.createElement('div');
+      btns.className = 'chat-buttons';
+      btns.innerHTML = `
+        <button class="chat-btn chat-btn-blue" onclick="chatStep(3, 'Under threshold')">Under threshold</button>
+        <button class="chat-btn chat-btn-blue" onclick="chatStep(3, 'Over threshold')">Over threshold</button>
+      `;
+      container.appendChild(btns);
+    } else if (selection === 'No') {
+      botMsg.innerHTML = `<span style="color:var(--text-muted);">No open invoice. Check contract type and offer available options.</span>`;
+      container.appendChild(botMsg);
+      const btns = document.createElement('div');
+      btns.className = 'chat-buttons';
+      btns.innerHTML = `
+        <button class="chat-btn chat-btn-blue" onclick="chatStep(3, 'Residential')">Residential</button>
+        <button class="chat-btn chat-btn-blue" onclick="chatStep(3, 'Business')">Business</button>
+      `;
+      container.appendChild(btns);
+    } else {
+      botMsg.innerHTML = `
+        <span style="color:var(--success);font-weight:700;">✓ Path complete</span><br>
+        <span style="color:var(--text-muted);">Document the outcome in the CRM field and close the interaction.</span>
+      `;
+      container.appendChild(botMsg);
+      const btns = document.createElement('div');
+      btns.className = 'chat-buttons';
+      btns.innerHTML = `<button class="chat-btn" onclick="resetChat()">Start over</button>`;
+      container.appendChild(btns);
+    }
+  };
+
+  window.resetChat = function () {
+    const container = document.getElementById('case3-chatbot');
+    if (!container) return;
+    container.innerHTML = `
+      <div class="chat-message">
+        <span style="color:var(--text-muted);">Does the client have an open invoice?</span>
+      </div>
+      <div class="chat-buttons">
+        <button class="chat-btn" onclick="chatStep(2, 'Yes')">Yes</button>
+        <button class="chat-btn" onclick="chatStep(2, 'No')">No</button>
+      </div>
+    `;
+    chatState = {};
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const c = document.getElementById('case3-chatbot');
+    if (c && c.children.length === 0) resetChat();
+    startBeforeSequence();
+  });
+
+  /* ========== Before table sequential highlight + typing ========== */
+  function clearHighlights() {
+    document.querySelectorAll('#before-table .hl').forEach(el => {
+      el.classList.remove('active', 'blink');
+    });
+  }
+  function highlight(id, ms) {
+    return new Promise(resolve => {
+      const el = document.getElementById(id);
+      if (!el) { resolve(); return; }
+      el.classList.add('active', 'blink');
+      setTimeout(() => {
+        el.classList.remove('blink');
+        // keep active until next clear or keep briefly
+        setTimeout(() => { el.classList.remove('active'); resolve(); }, 180);
+      }, ms);
+    });
+  }
+  function typeText(id, text, charMs) {
+    return new Promise(resolve => {
+      const el = document.getElementById(id);
+      if (!el) { resolve(); return; }
+      el.classList.add('active');
+      el.textContent = '';
+      const cursor = document.createElement('span');
+      cursor.className = 'type-cursor';
+      el.appendChild(cursor);
+      let i = 0;
+      function tick() {
+        if (i < text.length) {
+          el.insertBefore(document.createTextNode(text[i]), cursor);
+          i++;
+          setTimeout(tick, charMs);
+        } else {
+          setTimeout(() => {
+            cursor.remove();
+            el.classList.remove('active');
+            resolve();
+          }, 500);
+        }
+      }
+      tick();
+    });
+  }
+  function wait(ms) {
+    return new Promise(r => setTimeout(r, ms));
+  }
+  async function runBeforeCycle() {
+    const moreText = '(multiple more steps buried in table)';
+    clearHighlights();
+    // clear type lines
+    const yesMore = document.getElementById('bf-yes-more');
+    const noMore = document.getElementById('bf-no-more');
+    if (yesMore) yesMore.textContent = '';
+    if (noMore) noMore.textContent = '';
+
+    await highlight('bf-q', 900);
+    await wait(120);
+    await highlight('bf-yes', 700);
+    await wait(80);
+    await highlight('bf-yes-1', 650);
+    await wait(60);
+    await highlight('bf-yes-2', 650);
+    await wait(80);
+    await typeText('bf-yes-more', moreText, 28);
+    await wait(350);
+
+    await highlight('bf-no', 700);
+    await wait(80);
+    await highlight('bf-no-1', 600);
+    await wait(50);
+    await highlight('bf-no-2', 600);
+    await wait(50);
+    await highlight('bf-no-3', 600);
+    await wait(80);
+    await typeText('bf-no-more', moreText, 28);
+    await wait(700);
+  }
+  async function startBeforeSequence() {
+    if (!document.getElementById('before-table')) return;
+    while (true) {
+      await runBeforeCycle();
+    }
+  }
+
+  /* ========== Proposed Solution: click YES/NO + mouse cursor ========== */
+  window.showPropPath = function (which) {
+    const yesBtn = document.getElementById('prop-yes-btn');
+    const noBtn = document.getElementById('prop-no-btn');
+    const yesSteps = document.getElementById('prop-yes-steps');
+    const noSteps = document.getElementById('prop-no-steps');
+    const mouse = document.getElementById('fake-mouse');
+    const targetBtn = which === 'yes' ? yesBtn : noBtn;
+    const targetSteps = which === 'yes' ? yesSteps : noSteps;
+    const otherSteps = which === 'yes' ? noSteps : yesSteps;
+    const otherBtn = which === 'yes' ? noBtn : yesBtn;
+
+    if (!targetBtn || !targetSteps) return;
+
+    // Animate mouse toward the button
+    const contentBox = targetBtn.closest('.safari-content');
+    if (mouse && contentBox) {
+      const boxRect = contentBox.getBoundingClientRect();
+      const btnRect = targetBtn.getBoundingClientRect();
+      const x = btnRect.left - boxRect.left + btnRect.width / 2 - 4;
+      const y = btnRect.top - boxRect.top + btnRect.height / 2 - 2;
+      mouse.style.left = '8px';
+      mouse.style.top = '8px';
+      mouse.classList.add('is-visible');
+      mouse.style.transition = 'left .45s cubic-bezier(.2,.7,.2,1), top .45s cubic-bezier(.2,.7,.2,1), opacity .2s';
+      requestAnimationFrame(() => {
+        mouse.style.left = x + 'px';
+        mouse.style.top = y + 'px';
+      });
+      setTimeout(() => {
+        // "click" pulse
+        targetBtn.style.transform = 'scale(0.94)';
+        setTimeout(() => { targetBtn.style.transform = ''; }, 120);
+        mouse.classList.remove('is-visible');
+        reveal();
+      }, 480);
+    } else {
+      reveal();
+    }
+
+    function reveal() {
+      otherSteps.classList.remove('is-visible');
+      otherBtn.classList.remove('is-active');
+      targetBtn.classList.add('is-active');
+      targetSteps.classList.remove('is-visible');
+      // reflow for animation restart
+      void targetSteps.offsetWidth;
+      targetSteps.classList.add('is-visible');
+    }
+  };
+
+  // Auto-demo: alternate YES then NO every few seconds when idle
+  let propDemoTimer = null;
+  function startPropDemo() {
+    let turn = 'yes';
+    const tick = () => {
+      showPropPath(turn);
+      turn = turn === 'yes' ? 'no' : 'yes';
+    };
+    setTimeout(tick, 1200);
+    propDemoTimer = setInterval(tick, 7000);
+  }
+  // pause demo on real user interaction
+  document.addEventListener('click', (e) => {
+    if (e.target && (e.target.id === 'prop-yes-btn' || e.target.id === 'prop-no-btn')) {
+      if (propDemoTimer) { clearInterval(propDemoTimer); propDemoTimer = null; }
+    }
+  });
+  setTimeout(startPropDemo, 800);
+})();
+</script>
+</body>
+</html>
